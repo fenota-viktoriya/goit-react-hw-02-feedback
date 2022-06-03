@@ -1,5 +1,5 @@
 import React from 'react';
-
+import PropTypes from 'prop-types';
 export function FeedbackOptions({ onLeaveFeedback }) {
   return (
     <div>
@@ -33,3 +33,7 @@ export function FeedbackOptions({ onLeaveFeedback }) {
     </div>
   );
 }
+
+FeedbackOptions.propTypes = {
+  onLeaveFeedback: PropTypes.func.isRequired,
+};
