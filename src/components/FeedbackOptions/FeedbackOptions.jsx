@@ -1,36 +1,40 @@
 import React from 'react';
+import { AiOutlineSmile } from 'react-icons/ai';
+import { AiOutlineFrown } from 'react-icons/ai';
+import { AiOutlineMeh } from 'react-icons/ai';
 import PropTypes from 'prop-types';
+import { BtnFeedback, BtnDiv } from './FeedbackOptions.styled';
 export function FeedbackOptions({ onLeaveFeedback }) {
   return (
-    <div>
-      <button
+    <BtnDiv>
+      <BtnFeedback
         type="button"
         name="good"
         onClick={event => {
           onLeaveFeedback(event);
         }}
       >
-        Good
-      </button>
-      <button
+        <AiOutlineSmile />
+      </BtnFeedback>
+      <BtnFeedback
         type="button"
         name="neutral"
         onClick={event => {
           onLeaveFeedback(event);
         }}
       >
-        Neutral
-      </button>
-      <button
+        <AiOutlineMeh />
+      </BtnFeedback>
+      <BtnFeedback
         type="button"
         name="bad"
         onClick={event => {
           onLeaveFeedback(event);
         }}
       >
-        Bad
-      </button>
-    </div>
+        <AiOutlineFrown />
+      </BtnFeedback>
+    </BtnDiv>
   );
 }
 
