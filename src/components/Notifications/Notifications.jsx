@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Text } from './Notification.styled';
+import { Text } from './Notifications.styled';
 
-export function Notification({ message }) {
+export function Notifications({ message }) {
   return <Text>{message}</Text>;
 }
 
