@@ -13,7 +13,8 @@ export const BtnFeedback = styled.button` display: flex;
   border-radius: 50%;
 box - shadow: ${theme.shadow};
     transition: all 0.3s ease;
- 
+
+
    
   &:hover {
     color: ${({ name }) => {

@@ -1,9 +1,9 @@
 import { Component } from 'react';
 import { Sections } from '../Section';
 import { Statistic } from '../Statistic';
-import { FeedbackOptions } from '../FeedbackOptions';
 import { Notifications } from '../Notifications';
 import { Container } from './App.styled';
+import { FeedbackOptions } from '../FeedbackOptions';
 
 export class App extends Component {
   state = {
@@ -13,11 +13,10 @@ export class App extends Component {
   };
 
   changeState = e => {
-    const name = e.currentTarget.name;
-
+    const option = e.currentTarget.name;
     this.setState(prevState => {
       return {
-        [name]: prevState[name] + 1,
+        [option]: prevState[option] + 1,
       };
     });
   };
@@ -51,7 +50,7 @@ export class App extends Component {
     return (
       <Container>
         <Sections title="Please leave feedback">
-          <FeedbackOptions onLeaveFeedback={changeState} />
+          <FeedbackOptions options={this.state} onLeaveFeedback={changeState} />
           {countTotalFeedback !== 0 ? (
             <Statistic
               good={good}
